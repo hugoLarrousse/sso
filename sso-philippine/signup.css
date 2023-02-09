@@ -1,0 +1,85 @@
+:root {
+    --maincolor: #0065FC; /* medium blue */
+    --secondcolor: #DEEBFF; /* light blue  */
+    --thirdcolor: #F2F2F2; /* light grey */
+    --fourthcolor: #CACFD2; /* grey */
+    --fifthcolor: #1414E6; /* dark blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--thirdcolor);
+    display: flex;
+    justify-content: center;
+}
+
+#form {
+    width: 40%;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#content-div {
+    width: 90%;
+    padding : 40px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#first-line {
+    background-color: white;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#logo {
+    background-color: #0065FC;
+    width : 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#title {
+    font-family: Arial;
+    font-weight: 800;
+    color: #1414E6;
+}
+
+#firstname, #lastname, #email, #password, #confirmpassword {
+    background-color: var(--thirdcolor);
+    height: 30px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 0;
+    border-radius: 6px;
+}
+
+#signup-button {
+    margin: 30px auto 0 auto;
+    width: fit-content;
+    padding: 12px 40px;
+    border-radius: 30px;
+    border: 0;
+    background-color: #0065FC;
+    color: white;
+}
+
+#signup-button:hover {
+    border: 1px solid grey;
+    background-color: white;
+    color: grey;
+    cursor: pointer;
+}

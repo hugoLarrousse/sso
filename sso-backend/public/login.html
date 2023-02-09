@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+    :root {
+        --maincolor: #0065FC; /* medium blue */
+        --secondcolor: #DEEBFF; /* light blue  */
+        --thirdcolor: #F2F2F2; /* light grey */
+        --fourthcolor: #CACFD2; /* grey */
+        --fifthcolor: #1414E6; /* dark blue */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Raleway';
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--thirdcolor);
+        display: flex;
+        justify-content: center;
+    }
+
+    #form {
+        width: clamp(300px, 40%, 450px);
+        background-color: white;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    #content-div {
+        width: 90%;
+        padding : 40px 0;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #first-line {
+        background-color: white;
+        margin-top: 45px;
+        margin-bottom: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo {
+        background-color: #0065FC;
+        width : 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: auto;
+    }
+
+    #title {
+        font-family: Arial;
+        font-weight: 500;
+        color: #0065FC;
+        font-size: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #email, #password {
+        background-color: var(--thirdcolor);
+        height: 30px;
+        padding: 20px 20px;
+        margin: 8px 0;
+        border: 0;
+        border-radius: 6px;
+    }
+
+    #second-line {
+        margin: 30px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #forgotten-password {
+        color: var(--fourthcolor);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    #login {
+        padding: 12px 40px;
+        border-radius: 30px;
+        border: 1px solid var(--maincolor);
+        background-color: #0065FC;
+        color: white;
+    }
+
+    #login:hover {
+        border: 1px solid grey;
+        background-color: white;
+        color: grey;
+        cursor: pointer;
+    }
+
+    #or {
+        display: flex;
+        flex-direction: row;
+        text-transform:uppercase;
+        color: var(--fourthcolor);
+        margin-bottom: 30px;
+    }
+
+    #or:before, #or:after {
+        content: "";
+        flex: 1 1;
+        border-bottom: 1px solid var(--fourthcolor);
+        margin: auto 5px;
+    }
+
+    #sso-button {
+        width: 100%;
+        padding: 12px 0;
+        border-radius: 30px;
+        border: 1px solid grey;
+        background-color: white;
+        color: grey;
+    }
+
+    #sso-button:hover {
+        border: 1px solid white;
+        background-color: var(--maincolor);
+        color: white;
+        cursor: pointer;
+    }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Raleway">
+  </head>
+  <body>
+    <div id="form">
+      <div id="content-div">
+        <div id="logo"></div>
+        <div id="first-line">
+          <h1 id="title">Log in with Kera Connect</h1>
+        </div>
+        <form id="formLogin">
+        <!-- <form id="formLogin" action="/o/oauth2/v2/auth/user" method="post"> -->
+          <input type="email" id="email" name="email" placeholder="Email" autocomplete="email">
+          <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password">
+        </form>
+          <div id="second-line">
+            <p id="forgotten-password">Forgot your password?</p>
+            <input type="submit" value="Log in" id="login" form="formLogin">
+          </div>
+          <p id="or">or</p>
+          <button id="sso-button">Sign up</button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" nonce="nonce-rAnd0m">
+    // get query parameter redirectUri
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectUri = urlParams.get('redirectUri');
+
+    const form = document.getElementById('formLogin');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      
+
+      if (email === '' || password === '') {
+        alert('Please fill in all fields');
+        return;
+      }
+      const data = {
+        email,
+        password,
+        redirectUri,
+      };
+      try {
+      const response = await fetch('/o/oauth2/v2/auth/user', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (response.redirected) {
+        window.location.href = response.url;
+      }
+      const body = await response.json()
+      if (body.error) {
+        alert(body.message)
+      }
+      } catch (error) {
+        console.log('ERROR', error);
+      }
+    })
+ 
+    // get sso-button and on click redirect to ./sign-up
+    const ssoButton = document.getElementById('sso-button');
+    ssoButton.addEventListener('click', () => {
+      window.location.href = './sign-up?redirectUri=' + redirectUri;
+    })
+
+ </script>
+</html>

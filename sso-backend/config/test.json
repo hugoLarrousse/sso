@@ -1,0 +1,10 @@
+{
+  "sequelize": {
+    "database": {
+      "name": "magma-test"
+    },
+    "options": {
+      "logging": false
+    }
+  }
+}

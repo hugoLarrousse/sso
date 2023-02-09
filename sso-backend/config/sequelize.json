@@ -1,0 +1,44 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "magma1",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "magma-test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "magma_prod_postgresql_main_user",
+    "password": "T4y2qMYBJG2khOjw4UJB5T44WwtECce6",
+    "database": "magma_prod_postgresql_main",
+    "host": "dpg-c9gnjs46fj387813ochg-a.frankfurt-postgres.render.com",
+    "dialect": "postgres",
+    "ssl":true,
+    "dialectOptions":{
+      "ssl":{
+         "require":true,
+         "rejectUnauthorized": false
+      }
+   }
+  },
+  "staging": {
+    "username": "magma_staging_postgresql_user",
+    "password": "aAa5SghIZOWcdua2X2bgrYT2iiOdHiUy",
+    "database": "magma_staging_postgresql",
+    "host": "dpg-c9fdin397ej0p9p02e5g-a.frankfurt-postgres.render.com",
+    "dialect": "postgres",
+    "ssl":true,
+    "dialectOptions":{
+      "ssl":{
+         "require":true,
+         "rejectUnauthorized": false
+      }
+   }
+  }
+}

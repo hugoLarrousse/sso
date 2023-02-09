@@ -1,0 +1,84 @@
+{
+  "cors": {
+    "origins": [
+      "https://magma-candidate-beta1.herokuapp.com",
+      "https://v2-magma-dashboard-beta.herokuapp.com",
+      "https://app.forestadmin.com",
+      "https://magma-candidate.herokuapp.com",
+      "https://dashboard.magma.app",
+      "https://candidate.magma.app",
+      "https://sharing.magma.app",
+      "https://admin.magma.app",
+
+      "https://v2.dashboard.magma.app",
+      "https://v2.candidate.magma.app",
+      "https://stanford.magma.app",
+
+      "https://v3.admin.magma.app",
+
+      "https://magma-university.magma.app",
+      "https://vatel-bordeaux.magma.app",
+      "https://excelia.magma.app",
+      "https://excelia-bba-international.magma.app",
+      "https://crea-geneve.magma.app",
+      "https://digital-campus-paris.magma.app",
+      "https://ecole-des-ponts-business-school.magma.app",
+      "https://edna.magma.app",
+      "https://ecole-design-de-nantes.magma.app",
+      "https://nbs-france.magma.app",
+      "https://isrp.magma.app",
+      "https://ipc.magma.app",
+      "https://uimm.magma.app",
+      "https://uimm-rouen-dieppe.magma.app",
+      "https://csm.magma.app",
+      "https://ebs.magma.app",
+      "https://berlitz.magma.app",
+      "https://berlitz-normandie.magma.app",
+      "https://cefam.magma.app",
+      "https://polytech-orleans.magma.app",
+      "https://cefam-alumni.magma.app",
+      "https://cci-campus.magma.app",
+      "https://csm-ambassadeur.magma.app",
+      "https://eol.magma.app",
+      "https://nws.magma.app",
+      "https://beatles-academy.magma.app",
+      "https://iso.magma.app",
+      "https://esve.magma.app",
+      "https://iscom.magma.app",
+      "https://hetic.magma.app",
+      "https://pigier-toulouse.magma.app",
+      "https://alliance-ipb.magma.app",
+      "https://ain7.magma.app",
+      "https://matching.excelia-group.com",
+      "https://esmd.magma.app",
+      "https://institut-grandjean.magma.app",
+      "https://edta-sornas.magma.app",
+      "https://ifria-occitanie.magma.app",
+      "https://ifria-occitanie.magma.app",
+      "https://vatel-bordeaux-en.magma.app",
+      "https://magma-team.magma.app",
+      "https://forward-college.magma.app",
+      "https://openclassrooms.magma.app",
+
+      "https://ambassadeurs.openclassrooms.com",
+      "https://matching.openclassrooms.com",
+      "https://parrainage.excelia-group.com",
+      "https://referral.excelia-group.com",
+      "https://mentorat.ain7.com"
+    ],
+    "originRegExp": ["\\.magma\\.app$"]
+  },
+  "sequelize": {
+    "options": {
+      "logging": false
+    }
+  },
+  "domain": {
+    "dashboard": "https://dashboard.magma.app",
+    "admin": "https://V3.admin.magma.app",
+    "short": "https://magm.am"
+  },
+  "forest": {
+    "env": "PRODUCTION-V3"
+  }
+}

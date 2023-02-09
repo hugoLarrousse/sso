@@ -1,0 +1,10 @@
+const path = require('path');
+
+module.exports = {
+  config: !process.env.POSTGRES_URI && path.resolve('config', 'sequelize.json'),
+  'models-path': path.resolve('src', 'models'),
+  'seeders-path': path.resolve('src', 'seeders'),
+  'migrations-path': path.resolve('src', 'migrations'),
+  debug: !(process.env.NODE_ENV !== 'production'),
+  url: process.env.POSTGRES_URI
+}

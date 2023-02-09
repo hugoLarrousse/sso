@@ -1,0 +1,41 @@
+{
+  "cors": {
+    "origins": [
+      "http://localhost:3000",
+      "http://localhost:8080",
+      "http://localhost:8081",
+      "http://localhost:8082",
+      "http://localhost:8084",
+
+      "https://app.forestadmin.com",
+
+      "https://staging-v3.admin.magma.app",
+      "https://staging-v3.dashboard.magma.app",
+      "https://javu.magma.app",
+      "https://testing.magma.app",
+
+      "https://bs-local.com:3000",
+      "https://bs-local.com:8080",
+      "https://bs-local.com:8081",
+      "https://bs-local.com:8082",
+      "https://bs-local.com:8084"
+    ],
+    "originRegExp": ["staging\\.[a-zA-Z0-9.]+\\.magma\\.app$", "\\.netlify\\.app$", "\\.localhost:3000$"]
+  },
+  "sequelize": {
+    "options": {
+      "logging": false
+    }
+  },
+  "domain": {
+    "dashboard": "https://staging.dashboard.magma.app",
+    "admin": "https://staging-v3.admin.magma.app",
+    "short": "staging-v3.api.magma.app"
+  },
+  "redis": {
+    "rejectUnauthorized": false
+  },
+  "forest": {
+    "env": "Staging-V3"
+  }
+}

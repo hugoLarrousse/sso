@@ -1,0 +1,47 @@
+:root {
+    --maincolor: #0065FC; /* medium blue */
+    --secondcolor: #DEEBFF; /* light blue  */
+    --thirdcolor: #F2F2F2; /* light grey */
+    --fourthcolor: #CACFD2; /* grey */
+    --fifthcolor: #1414E6; /* dark blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(https://www.linkeo.com/ressources/images/e3a776cebf6e.jpeg);
+    background-size : 100%;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 40px;
+    color: #0065FC;
+}
+
+#sso-button {
+    width: 20%;
+    padding: 12px 0;
+    border-radius: 30px;
+    border: 1px solid white;
+    background-color: var(--maincolor);
+    color: white;
+    font-weight: bold;
+    margin: 50px;
+}
+
+#sso-button:hover {
+    border: 1px solid grey;
+    background-color: white;
+    color: grey;
+    cursor: pointer;
+}

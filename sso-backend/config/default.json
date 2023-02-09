@@ -1,0 +1,35 @@
+{
+  "cors": {
+    "origins": [
+      "http://localhost:8081",
+      "http://localhost:8080",
+      "http://localhost:3000",
+      "http://localhost:8082",
+      "http://localhost:8084"
+    ],
+    "originRegExp": []
+  },
+  "sequelize": {
+    "options": {
+      "logging": false
+    }
+  },
+  "domain": {
+    "dashboard": "http://localhost:8081",
+    "admin": "http://localhost:3000",
+    "short": "localhost:3002"
+  },
+  "availableCRMs": ["hubspot", "oscar", "salesforce", "dynamics", "SC-Form"],
+  "scheduler": {
+    "waitingTime": 8
+  },
+  "messageBird": {
+    "url": "https://rest.messagebird.com/"
+  },
+  "redis": {
+    "rejectUnauthorized": false
+  },
+  "forest": {
+    "env": "PRODUCTION-V3"
+  }
+}

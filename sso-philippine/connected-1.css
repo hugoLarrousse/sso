@@ -1,0 +1,42 @@
+:root {
+    --maincolor: #0065FC; /* medium blue */
+    --secondcolor: #DEEBFF; /* light blue  */
+    --thirdcolor: #F2F2F2; /* light grey */
+    --fourthcolor: #CACFD2; /* grey */
+    --fifthcolor: #1414E6; /* dark blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(https://www.linkeo.com/ressources/images/e3a776cebf6e.jpeg);
+    background-size : 100%;
+}
+
+#success {
+    display: flex;
+    align-items: center ;
+    background-color: #90EE90;
+    width: 25%;
+    padding: 12px 24px;
+    border-radius: 12px;
+    margin: 50px;
+}
+
+.fa-solid {
+    font-size: 18px;
+    color: #2E8B57;
+}
+
+h1 {
+    color: #2E8B57;
+    margin-left: 12px;
+    font-size: 18px;
+}
+

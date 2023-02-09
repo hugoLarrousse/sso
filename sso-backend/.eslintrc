@@ -1,0 +1,47 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": ["plugin:@typescript-eslint/recommended", "airbnb-base"],
+    "parserOptions": {
+      "ecmaVersion": "latest", // Allows the use of modern ECMAScript features
+      "sourceType": "module" // Allows for the use of imports
+    },
+    "env": {
+      "node": true // Enable Node.js global variables
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      }
+    },
+    // add authorized words
+    "globals": {
+      "Express": true
+    },
+    "rules": {
+      "no-underscore-dangle": "off",
+      "no-console": "off",
+      "comma-dangle": ["error", {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore"
+      }],
+      "arrow-parens":"off",
+      "no-await-in-loop": "off",
+      "no-restricted-syntax":"off",
+      "linebreak-style":"off",
+      "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+      "max-len": ["error", { "code": 130, "tabWidth": 2 }],
+      "guard-for-in": "off",
+      "no-continue": "off",
+      "import/extensions": "off",
+      "object-curly-newline": ["error", {
+          "ObjectPattern": { "minProperties": 5 }
+      }],
+      "arrow-body-style": "off",
+      "quotes": ["warn", "single"]
+    }
+}

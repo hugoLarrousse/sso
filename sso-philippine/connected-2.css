@@ -1,0 +1,42 @@
+:root {
+    --maincolor: #0065FC; /* medium blue */
+    --secondcolor: #DEEBFF; /* light blue  */
+    --thirdcolor: #F2F2F2; /* light grey */
+    --fourthcolor: #CACFD2; /* grey */
+    --fifthcolor: #1414E6; /* dark blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(https://img.freepik.com/vecteurs-libre/antecedents-medicaux-propres_53876-116875.jpg?w=2000);
+    background-size : 100%;
+}
+
+#success {
+    display: flex;
+    align-items: center ;
+    background-color: #eed890;
+    width: 25%;
+    padding: 12px 24px;
+    border-radius: 12px;
+    margin: 50px;
+}
+
+.fa-solid {
+    font-size: 18px;
+    color: red;
+}
+
+h1 {
+    color: black;
+    margin-left: 12px;
+    font-size: 18px;
+}
+
